@@ -32,23 +32,19 @@ var trace4 = {
 var data = [trace4];
 var data2 = [trace3];
 var data3 = [trace1, trace2, trace3];
-//var dataSum = [sum1, sum2, sum3]
+
 var sum1;
 var sum2;
 var sum3;
 sum1 = 0;
 sum2 = 0;
 sum3 = 0;
-console.log(trace3);
-console.log(trace3.y);
+
 for (var i = 0; i < trace1.y.length; i++) {
     sum1 += trace1.y[i];
     sum2 += trace2.y[i];
     sum3 += trace3.y[i];
 }
-console.log(sum1);
-console.log(sum2);
-console.log(sum3);
 
 var dataObj = {
     x: ['Penicilin', 'Streptomycin', 'Neomycin'], 
@@ -64,9 +60,6 @@ var oneG2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var oneG3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var totalG = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-//oneG1 = 0;
-//oneG2 = 0;
-//oneG3 = 0;
 
 for (var i = 0; i < trace1.y.length; i++) {
     if (trace1.y[i] <= 1)
@@ -78,45 +71,41 @@ for (var i = 0; i < trace1.y.length; i++) {
     totalG[i] = oneG1[i] + oneG2[i] + oneG3[i];
 }
 
-//    x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
-/*
-x: ['Aerobacter aerogenes', 'Brucella abortus',' Brucella anthracis', 'Diplococcus pneumoniae', 'Escherichia coli', 'Klebsiella pneumoniae', 'Mycobacterium tuberculosis', 'Proteus vulgaris', 'Pseudomonas aeruginosa', 'Salmonella (Eberthella) typhosa', 'Salmonella schottmuelleri', 'Staphylococcus albus', 'Staphylococcus aureus', 'Streptococcus fecalis', 'Streptococcus hemolyticus', 'Streptococcus viridans'],
-*/
 var oneGObj = {
-   // x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
-    x: ['Aerobacter aerogenes', 'Brucella abortus',' Brucella anthracis', 'Diplococcus pneumoniae', 'Escherichia coli', 'Klebsiella pneumoniae', 'Mycobacterium tuberculosis', 'Proteus vulgaris', 'Pseudomonas aeruginosa', 'Salmonella (Eberthella) typhosa', 'Salmonella schottmuelleri', 'Staphylococcus albus', 'Staphylococcus aureus', 'Streptococcus fecalis', 'Streptococcus hemolyticus', 'Streptococcus viridans'],
+    x: ['Aerobacter aerogenes', 'Brucella abortus',' Brucella anthracis', 'Diplococcus pneumoniae', 'Escherichia coli', 'Klebsiella pneumoniae', 
+	'Mycobacterium tuberculosis', 'Proteus vulgaris', 'Pseudomonas aeruginosa', 'Salmonella (Eberthella) typhosa', 'Salmonella schottmuelleri', 
+	'Staphylococcus albus', 'Staphylococcus aureus', 'Streptococcus fecalis', 'Streptococcus hemolyticus', 'Streptococcus viridans'],
     y: oneG1,
-    //mode: 'markers',
     type: 'box',
     boxpoints: 'all',
     jitter: 0.3
 };
 
 var oneGObj2 = {
-    //x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
-    x: ['Aerobacter aerogenes', 'Brucella abortus',' Brucella anthracis', 'Diplococcus pneumoniae', 'Escherichia coli', 'Klebsiella pneumoniae', 'Mycobacterium tuberculosis', 'Proteus vulgaris', 'Pseudomonas aeruginosa', 'Salmonella (Eberthella) typhosa', 'Salmonella schottmuelleri', 'Staphylococcus albus', 'Staphylococcus aureus', 'Streptococcus fecalis', 'Streptococcus hemolyticus', 'Streptococcus viridans'],
+    x: ['Aerobacter aerogenes', 'Brucella abortus',' Brucella anthracis', 'Diplococcus pneumoniae', 'Escherichia coli', 'Klebsiella pneumoniae', 
+	'Mycobacterium tuberculosis', 'Proteus vulgaris', 'Pseudomonas aeruginosa', 'Salmonella (Eberthella) typhosa', 'Salmonella schottmuelleri', 
+	'Staphylococcus albus', 'Staphylococcus aureus', 'Streptococcus fecalis', 'Streptococcus hemolyticus', 'Streptococcus viridans'],
     y: oneG2,
-    //mode: 'markers',
     type: 'box',
     boxpoints: 'all',
     jitter: 0.3
 };
 
 var oneGObj3 = {
-    //x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
-   x: ['Aerobacter aerogenes', 'Brucella abortus',' Brucella anthracis', 'Diplococcus pneumoniae', 'Escherichia coli', 'Klebsiella pneumoniae', 'Mycobacterium tuberculosis', 'Proteus vulgaris', 'Pseudomonas aeruginosa', 'Salmonella (Eberthella) typhosa', 'Salmonella schottmuelleri', 'Staphylococcus albus', 'Staphylococcus aureus', 'Streptococcus fecalis', 'Streptococcus hemolyticus', 'Streptococcus viridans'],
+    x: ['Aerobacter aerogenes', 'Brucella abortus',' Brucella anthracis', 'Diplococcus pneumoniae', 'Escherichia coli', 'Klebsiella pneumoniae', 
+	'Mycobacterium tuberculosis', 'Proteus vulgaris', 'Pseudomonas aeruginosa', 'Salmonella (Eberthella) typhosa', 'Salmonella schottmuelleri', 
+	'Staphylococcus albus', 'Staphylococcus aureus', 'Streptococcus fecalis', 'Streptococcus hemolyticus', 'Streptococcus viridans'],
     y: oneG3,
-    //mode: 'markers',
     type: 'box',
     boxpoints: 'all',
     jitter: 0.3
 };
 
 var totalGObj = {
-    //x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
-    x: ['Aerobacter aerogenes', 'Brucella abortus',' Brucella anthracis', 'Diplococcus pneumoniae', 'Escherichia coli', 'Klebsiella pneumoniae', 'Mycobacterium tuberculosis', 'Proteus vulgaris', 'Pseudomonas aeruginosa', 'Salmonella (Eberthella) typhosa', 'Salmonella schottmuelleri', 'Staphylococcus albus', 'Staphylococcus aureus', 'Streptococcus fecalis', 'Streptococcus hemolyticus', 'Streptococcus viridans'],
+    x: ['Aerobacter aerogenes', 'Brucella abortus',' Brucella anthracis', 'Diplococcus pneumoniae', 'Escherichia coli', 'Klebsiella pneumoniae', 
+	'Mycobacterium tuberculosis', 'Proteus vulgaris', 'Pseudomonas aeruginosa', 'Salmonella (Eberthella) typhosa', 'Salmonella schottmuelleri', 
+	'Staphylococcus albus', 'Staphylococcus aureus', 'Streptococcus fecalis', 'Streptococcus hemolyticus', 'Streptococcus viridans'],
     y: totalG,
-    //mode: 'markers',
     type: 'box',
     boxpoints: 'all',
     jitter: 0.3
@@ -146,9 +135,7 @@ var strep3Obj = {
     name: 'Neomycin'
 }
 
-
 var oneGarray = [totalGObj];
-
 var strepArray = [strep1Obj, strep2Obj, strep3Obj];
 
 var layout = {
@@ -158,22 +145,18 @@ var layout = {
 };
 
 var layout2 = {
-    title: 'Count of antibiotic that require less than a gram to kill bacteria',
+    title: 'Number of antibiotics that require less than a gram dosage to stop bacteria growth',
     height: window.height,
     width: window.width,
     boxmode: 'group'
 };
 
 var layout3 = {
-    title: 'Dosage needed to kill strep (Grams)',
+    title: 'Dosage needed to stop growth of Streptococcus bacteria (Grams)',
     height: window.height,
     width: window.width
 };
 
-
-
-
-//Plotly.newPlot('graph', data, layout);
 Plotly.newPlot('graph', dataArray, layout, {staticPlot: true});
 Plotly.newPlot('graph2', oneGarray, layout2, {staticPlot: true});
 Plotly.newPlot('graph3', strepArray, layout3, {staticPlot: true});
